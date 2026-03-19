@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CRIMSONSSYSTEM</title>
+
+<script>
+async function detectCountry() {
+  try {
+    const res = await fetch("https://ipapi.co/json/");
+    const data = await res.json();
+
+    if (data.country === "IL") {
+      window.location.href = "hebrew.html";
+    }
+
+  } catch (e) {
+    console.log("Country detect failed");
+  }
+}
+
+detectCountry();
+</script>
+
+<style>
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+h1 {
+  color: red;
+}
+
+img {
+  width: 300px;
+  margin: 20px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<h1>CRIMSONSSYSTEM</h1>
+
+<p>Welcome to my PC website</p>
+
+<img src="pc.png">
+
+<p>Best gaming PCs</p>
+
+</body>
+
+</html>
